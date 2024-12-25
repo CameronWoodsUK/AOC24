@@ -42,7 +42,6 @@ for gate in gates:
     if gate.output not in values: values[gate.output] = None
 values = dict(sorted(values.items(), key=lambda x: x[0]))
 
-
 while not Done(values):
     for gate in gates:
         values = Evaluate(values, gate)
